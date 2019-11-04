@@ -2,9 +2,12 @@
 
 This firmware makes the **Sonoff WIFI Smart Switch** compatible with **Apple Homekit**!
 
-<img src="https://raw.githubusercontent.com/Gruppio/Sonoff-Homekit/images/images/sonoffonly.png" alt="Sonoff" width="180"/> <img src="https://raw.githubusercontent.com/Gruppio/Sonoff-Homekit/images/images/transparent.png" alt=" " width="20"/><img src="https://raw.githubusercontent.com/Gruppio/Sonoff-Homekit/images/images/homekit.png" alt="Works with Apple Homekit" width="180"/>
+<img src="https://raw.githubusercontent.com/Gruppio/Sonoff-Homekit/images/images/sonoffonly.png" alt="Sonoff Basic" width="180"/>
+<img src="https://raw.githubusercontent.com/Gruppio/Sonoff-Homekit/images/images/transparent.png" alt=" " width="20"/>
+<img src="https://raw.githubusercontent.com/Gruppio/Sonoff-Homekit/images/images/homekit.png" alt="Works with Apple Homekit" width="180"/>
+<img src="/images/Sonoff-mini-housing.jpg" alt="Sonoff Mini" width="180"/>
 
-### Homekit runs on the Sonoff ! 😳
+### Homekit runs on the Sonoff ! 
 
 Unlike other projects on github, this firmware does NOT require anything else in order to work.
 It is not based on the Tasmota Fw, you don't need HomeBridge running on a Raspberry-Pi or an MQTT server, since HomeKit runs natively are enough a Wi-Fi connection and an Apple Device!
@@ -14,9 +17,9 @@ The implementation use Apple provided specifications for developers, so it is a 
 Now you finally can have a HomeKit devices without spending a lot of money!
 
 ### Compatible Devices
-This Software is currently tested on: **Sonoff Basic**, **Sonoff Slampher**, **Sonoff S26** (thanks Arjan)
+This Software is currently tested on: **Sonoff Basic**, **Sonoff Mini**
 
-### Video Demo
+### Video Demo by Grouppio
 
 Click on the image for play the video:
 <br>
@@ -68,24 +71,17 @@ By default the Sonoff will have a Enabled state at power on, you can change this
  9) Confirm that you want to add the Sonoff
  10) Insert the Password that is `11111111`
 
-Done! 🎉 
+Done!  
 
-## If you like this project please:
-
-<a href="https://bmc.xyz/l/SonoffHomekit" target="_blank"><img src="https://raw.githubusercontent.com/Gruppio/Sonoff-Homekit/images/images/buymeacoffee.png" alt="Buy Me A Coffee" width="300" ></a>
-
-My supporters will also receive immediately:
-
-* A **Step-by-Step Video Tutorial** that will help you to flash and connect your Sonoff
-* A personal **E-Mail** where you can write to me your Issues
 
 ---
+This project would not have existed without:
 
 #### Special thanks to:
 @maximkulkin
-
-This project would not have existed without:
 https://github.com/maximkulkin/esp-homekit
 https://github.com/maximkulkin/esp-homekit-demo
 https://github.com/maximkulkin/esp-wifi-config
+
+@gruppio
 
