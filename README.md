@@ -63,6 +63,10 @@ By default the Sonoff will have a Enabled state at power on, you can change this
  As you see the first pin (with red cable) does not have oval form it's cube this will help with newer unknown models that starts all pinout with that cubic form as the first VCC pin.
  <img src="images/IMG_1348.jpeg" alt="drawing" width="600"/>
  <img src="images/IMG_1350.jpeg" alt="drawing" width="600"/>
+ 
+More extended information about flashing ESP devices using RaspberryPI can be found <a href="https://www.sigmdel.ca/michel/ha/sonoff/flashing_sonoff_en.html">here</a>.
+ 
+ 
  3) Install required tools to your machine or raspberrypi
  
 ```
