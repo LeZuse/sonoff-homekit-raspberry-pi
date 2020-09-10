@@ -1,4 +1,4 @@
-# Sonoff Homekit
+# Sonoff Homekit with instructions!
 
 This firmware makes the **Sonoff WIFI Smart Switch** compatible with **Apple Homekit**!
 
@@ -53,8 +53,32 @@ By default the Sonoff will have a Enabled state at power on, you can change this
 
 ### Flash the Sonoff
  1) Unplug your sonoff from the power line _(or you can burn your PC)_
- 2) Connect your Sonoff to a serial adapter @ 3.3v
- 3) Run the `flash.sh` script 
+ 2) Connect your Sonoff to a serial adapter @ 3.3v or raspberry pi (no need additional serial to usb converter) just see pictures below
+ 
+ #### Flash using Serial To USB Converter
+ <img src="images/IMG_1349.png" alt="USB TTL" width="600"/>
+ 
+ #### Flash using RaspberryPI directly without any serial converters...
+ <img src="images/sonoff-rpi.jpg" alt="Raspberry to sonoff pinout" width="600"/>
+ As you see the first pin (with red cable) does not have oval form it's cube this will help with newer unknown models that starts all pinout with that cubic form as the first VCC pin.
+ <img src="images/IMG_1348.jpeg" alt="drawing" width="600"/>
+ <img src="images/IMG_1350.jpeg" alt="drawing" width="600"/>
+ 3) Install required tools to your machine or raspberrypi
+ 
+```
+pip install esptool
+git clone github.com/e1z0/Sonoff-Homekit.git
+cd Sonoff-Homekit
+# now disconnect the red (VCC) cable from raspberry, turn the only button on Sonoff and turn the power back on, 
+# relase the button after few seconds, this will put the device in flash mode.
+# make a backup
+esptool.py --port /dev/ttyAMA0 read_flash 0x00000 0x100000 Sonoff_backup_01.bin
+# This will reset the device, do the same thing with powering pressing key, erase the internal flash memory
+esptool.py --port /dev/ttyS0 erase_flash
+# this will reset the device too, repeat the same steps
+```
+3) Run the script `./flash.sh`
+
 
 ### Add Sonoff to Home app
  1) Connect your iPhone or iPad to the new wifi network `Sonoff Switch-xxx`
@@ -76,8 +100,10 @@ Done! 🎉
 
 My supporters will also receive immediately:
 
-* A **Step-by-Step Video Tutorial** that will help you to flash and connect your Sonoff
-* A personal **E-Mail** where you can write to me your Issues
+* A message to the original author, if you share open source please share the full documentation also! There is no need to force your users to buy you a coffee, learn more about open source culture! 
+
+* <del>A **Step-by-Step Video Tutorial** that will help you to flash and connect your Sonoff</del>
+* <del>A personal **E-Mail** where you can write to me your Issues</del>
 
 ---
 
