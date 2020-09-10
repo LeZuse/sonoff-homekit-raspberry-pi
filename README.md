@@ -70,6 +70,12 @@ More extended information about flashing ESP devices using RaspberryPI can be fo
  3) Install required tools to your machine or raspberrypi
  
 ```
+# run commands as root on your raspberry, on other machine there is no need to edit cmdline or disable serial debugging service
+nano /boot/cmdline.txt
+# Remove text console=serial0,115200
+systemctl stop serial-getty@ttyAMA0.service
+systemctl disable serial-getty@ttyAMA0.service
+reboot
 pip install esptool
 git clone github.com/e1z0/Sonoff-Homekit.git
 cd Sonoff-Homekit
