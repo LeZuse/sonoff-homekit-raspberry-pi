@@ -82,7 +82,7 @@ cd Sonoff-Homekit
 # now disconnect the red (VCC) cable from raspberry, turn the only button on Sonoff and turn the power back on, 
 # relase the button after few seconds, this will put the device in flash mode.
 # make a backup
-esptool.py --port /dev/ttyAMA0 read_flash 0x00000 0x100000 Sonoff_backup_01.bin
+esptool.py --port /dev/ttyS0 read_flash 0x00000 0x100000 Sonoff_backup_01.bin
 # This will reset the device, do the same thing with powering pressing key, erase the internal flash memory
 esptool.py --port /dev/ttyS0 erase_flash
 # this will reset the device too, repeat the same steps
